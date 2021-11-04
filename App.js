@@ -8,19 +8,24 @@ import HomeScreen from './src/view/screens/HomeScreen';
 import DetailsSceeen from './src/view/screens/DetailsScreen';
 import {StatusBar} from 'react-native';
 import COLORS from './src/consts/colors';
-import signInScreen from './src/view/screens/signInScreen';
-import signUp from './src/view/screens/signUp';
+import SignInScreen from './src/view/screens/SignInScreen';
+import Login from './src/view/screens/Login';
+import SignUpScreen from './src/view/screens/SignUpScreen';
 
 
 const App = () => {
   return (
     <NavigationContainer>
       <StatusBar barStyle="dark-content" backgroundColor={COLORS.white} />
-      <Stack.Navigator screenOptions={{header: () => null}}>
-        <Stack.Screen name= "signUp" component={signUp}/>
-        <Stack.Screen name= "signIn" component={signInScreen}/>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsSceeen} />
+      <Stack.Navigator>
+      {/* screenOptions={{header: () => null}} */}
+        {/* <Stack.Screen name= "signUp" component={signUp}/> */}
+        <Stack.Screen name= "Login" component={Login}/>
+        <Stack.Screen name= "SignInScreen" component={SignInScreen}/>
+        <Stack.Screen name= "SignUpScreen" component={SignUpScreen}/>
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="DetailsScreen" component={DetailsSceeen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

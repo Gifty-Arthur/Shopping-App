@@ -1,23 +1,22 @@
-import React from 'react';
-import {
-  View,
-  SafeAreaView,
-  Text,
-  StyleSheet,
-  FlatList,
-  Image,
-  Dimensions,
-} from 'react-native';
-import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import COLORS from '../../consts/colors';
-import goods from '../../consts/goods';
+
+ import React from "react";
+ import {View, Text,SafeAreaView,StyleSheet,TextInput,TouchableOpacity, Dimensions} from "react-native";
+ 
+ import { AntDesign } from '@expo/vector-icons';
+ import COLORS from '../assets/consts/colors';
+ import { MaterialIcons } from '@expo/vector-icons';
+import { FlatList } from "react-native-gesture-handler";
+
+
+import  items from "../assets/consts/items";
+
+
 const width = Dimensions.get('window').width / 2 - 30;
 
-const HomeScreen = ({navigation}) => {
+const Home = ({navigation}) => {
   const [catergoryIndex, setCategoryIndex] = React.useState(0);
 
-  const categories = ['HANDBAGS', 'SNEAKERS', 'HEELS','CLOTHES'];
+  const categories =  ['HANDBAGS', 'SNEAKERS', 'HEELS','CLOTHES'];
 
   const CategoryList = () => {
     return (
@@ -40,11 +39,11 @@ const HomeScreen = ({navigation}) => {
     );
   };
 
-  const Card = ({good}) => {
+  const Card = ({items}) => {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={() => navigation.navigate('DetailsScreen', good)}>
+        onPress={() => navigation.navigate('Details', items)}>
         <View style={style.card}>
           <View style={{alignItems: 'flex-end'}}>
             <View
@@ -54,15 +53,11 @@ const HomeScreen = ({navigation}) => {
                 borderRadius: 20,
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: good.like
+                backgroundColor: items.like
                   ? 'rgba(245, 42, 42,0.2)'
                   : 'rgba(0,0,0,0.2) ',
               }}>
-              <Icon
-                name="favorite"
-                size={18}
-                color={good.like ? COLORS.red : COLORS.black}
-              />
+              <MaterialIcons name="favorite" size={24} color="black" />
             </View>
           </View>
 
@@ -72,13 +67,13 @@ const HomeScreen = ({navigation}) => {
               alignItems: 'center',
             }}>
             <Image
-              source={good.img}
+              source={items.img}
               style={{flex: 1, resizeMode: 'contain'}}
             />
           </View>
 
           <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 10}}>
-            {good.name}
+            {items.name}
           </Text>
           <View
             style={{
@@ -87,13 +82,13 @@ const HomeScreen = ({navigation}) => {
               marginTop: 5,
             }}>
             <Text style={{fontSize: 19, fontWeight: 'bold'}}>
-              ${good.price}
+              ${items.price}
             </Text>
             <View
               style={{
                 height: 25,
                 width: 25,
-                backgroundColor: COLORS.pink,
+                backgroundColor: COLORS.yellow,
                 borderRadius: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -114,33 +109,35 @@ const HomeScreen = ({navigation}) => {
       <View style={style.header}>
         <View>
           <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
-          <Text style={{fontSize: 38, color: COLORS.pink, fontWeight: 'bold'}}>
-            Gifty Closet
+          <Text style={{fontSize: 38, color: COLORS.yellow, fontWeight: 'bold'}}>
+            Gifty closet
           </Text>
         </View>
-        <Icon name="shopping-cart" size={28} />
+        
+        <AntDesign name="shoppingcart" size={28} color="black" />
       </View>
       <View style={{marginTop: 30, flexDirection: 'row'}}>
         <View style={style.searchContainer}>
-          <Icon name="search" size={25} style={{marginLeft: 20}} />
+        <AntDesign name="search1" size={25} color="black" style={{marginLeft: 20}}/>  
           <TextInput placeholder="Search" style={style.input} />
         </View>
         <View style={style.sortBtn}>
-          <Icon name="sort" size={30} color={COLORS.white} />
+        <MaterialIcons name="sort" size={24} color="black" />
         </View>
       </View>
       <CategoryList />
       <FlatList
-        columnWrapperStyle={{justifyContent: 'space-between'}}
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{
-          marginTop: 10,
-          paddingBottom: 50,
-        }}
+        
+        // columnWrapperStyle={{justifyContent: 'space-between'}}
+        // showsVerticalScrollIndicator={false}
+        // contentContainerStyle={{
+        //   marginTop: 10,
+        //   paddingBottom: 50,
+        // }}
         numColumns={2}
-        data={goods}
+        data={items}
         renderItem={({item}) => {
-          return <Card good={item} />;
+          return <Card items={item} />;
         }}
       />
     </SafeAreaView>
@@ -156,10 +153,10 @@ const style = StyleSheet.create({
   },
   categoryText: {fontSize: 16, color: 'grey', fontWeight: 'bold'},
   categoryTextSelected: {
-    color: COLORS.pink,
+    color: COLORS.yellow,
     paddingBottom: 5,
     borderBottomWidth: 2,
-    borderColor: COLORS.pink,
+    borderColor: COLORS.yellow,
   },
   card: {
     height: 225,
@@ -194,9 +191,10 @@ const style = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 10,
-    backgroundColor: COLORS.pink,
+    backgroundColor: COLORS.yellow,
     justifyContent: 'center',
     alignItems: 'center',
   },
 });
-export default HomeScreen;
+export default Home;
+    
