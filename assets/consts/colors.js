@@ -4,8 +4,7 @@ const COLORS = {
     red: '#F52A2A',
     light: '#F1F1F1',
     green: '#00B761',
-    purple: '#8e24aa',
-    pink: '#8e24aa',
-  };
-  
-  export default COLORS;
+    yellow: '#FFFF00',
+};
+
+export default COLORS;
