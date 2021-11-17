@@ -21,7 +21,7 @@ const goods = [
     {
       id: 3,
       name: 'office wear',
-      price: '25.99',
+      price: '.98.89',
       like: false,
       img: require('../assets/dress3.jpg'),
       about:
@@ -31,7 +31,7 @@ const goods = [
     {
       id: 4,
       name: 'shoddies',
-      price: '25.99',
+      price: '56.99',
       like: true,
       img: require('../assets/dress4.jpg'),
       about:
