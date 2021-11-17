@@ -4,7 +4,8 @@ const COLORS = {
     red: '#F52A2A',
     light: '#F1F1F1',
     green: '#00B761',
-    puple: '#8e24aa',
+    purple: '#8e24aa',
+    pink: '#FFC0CB',
   };
   
   export default COLORS;

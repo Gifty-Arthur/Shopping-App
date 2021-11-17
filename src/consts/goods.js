@@ -1,59 +1,59 @@
 const goods = [
     {
-      id: god,
+      id: 1,
       name: 'Top and down',
-      price: '39.99',
+      price: '50.00',
       like: true,
       img: require('../assets/dress1.jpg'),
       about:
-        'Succulent Plantis one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+        'Nice top and down for club or any outing',
     },
   
     {
-      id: dress2,
+      id: 2,
       name: 'Soldier down',
-      price: '29.99',
+      price: '90.00',
       like: false,
       img: require('../assets/dress2.jpg'),
       about:
-        'Dragon Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+        'soldier down for jogging and outing',
     },
     {
-      id: dress3,
+      id: 3,
       name: 'office wear',
       price: '25.99',
       like: false,
       img: require('../assets/dress3.jpg'),
       about:
-        'Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+        'This a wear to office , parties and weedings',
     },
   
     {
-      id: dress4,
+      id: 4,
       name: 'shoddies',
       price: '25.99',
       like: true,
       img: require('../assets/dress4.jpg'),
       about:
-        'Potted Plant Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+        'Shoddies for outing and any other place',
     },
     {
-      id: dress5,
+      id: 5,
       name: 'thrift ',
       price: '50.99',
       like: true,
-      img: require('../assets/dress5.png'),
+      img: require('../assets/dress5.jpg'),
       about:
-        'Potted Plant Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+        'thrift dress for the paties and clubs',
     },
     {
-      id: dress6,
-      name: 'Dragon Plant',
+      id: 6,
+      name: 'Skirt and top',
       price: '50.99',
       like: false,
-      img: require('../assets/dresst6.png'),
+      img: require('../assets/dress6.jpg'),
       about:
-        'Potted Plant Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+        'for  parties ',
     },
   ];
   
