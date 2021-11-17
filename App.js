@@ -11,6 +11,8 @@ import COLORS from './src/consts/colors';
 import SignInScreen from './src/view/screens/SignInScreen';
 import Login from './src/view/screens/Login';
 import SignUpScreen from './src/view/screens/SignUpScreen';
+import Cart from './src/view/screens/Cart';
+
 
 
 const App = () => {
@@ -25,6 +27,8 @@ const App = () => {
         <Stack.Screen name= "SignUpScreen" component={SignUpScreen}/>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="DetailsScreen" component={DetailsSceeen} />
+        <Stack.Screen name="Cart" component={Cart} />
+        
 
       </Stack.Navigator>
     </NavigationContainer>

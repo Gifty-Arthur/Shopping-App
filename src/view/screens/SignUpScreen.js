@@ -21,15 +21,15 @@ export default function SignUp({navigation}) {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.logo}> Gifty Closet </Text>
+      <Text style={styles.logo}>Let Get Started! </Text>
       {/* <Image style={styles.image} source={require("./assets/log2.png")} /> */}
 
       <StatusBar style="auto" />
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="FirstName."
-          placeholderTextColor="#003f5c"
+          placeholder="FirstName"
+          placeholderTextColor="white"
           onChangeText={(firstName) => setFirstName(FirstName)}
         />
       </View>
@@ -37,8 +37,8 @@ export default function SignUp({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="LastName."
-          placeholderTextColor="#003f5c"
+          placeholder="LastName"
+          placeholderTextColor="white"
           onChangeText={(lastName) => setLastName(lastName)}
         />
       </View>
@@ -46,8 +46,8 @@ export default function SignUp({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email."
-          placeholderTextColor="#003f5c"
+          placeholder="Email"
+          placeholderTextColor="white"
           onChangeText={(email) => setEmail(email)}
         />
       </View>
@@ -55,8 +55,8 @@ export default function SignUp({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Password."
-          placeholderTextColor="#003f5c"
+          placeholder="Password"
+          placeholderTextColor="white"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
         />
@@ -65,8 +65,8 @@ export default function SignUp({navigation}) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="ConfirmPassword."
-          placeholderTextColor="#003f5c"
+          placeholder="ConfirmPassword"
+          placeholderTextColor="white"
           onChangeText={(confirmPassword) => setConfirmPassword(confirmPassword)}
         />
       </View>
@@ -101,7 +101,7 @@ export default function SignUp({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "black",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   },
 
   inputView: {
-    backgroundColor: "#FFC0CB",
+    backgroundColor: "purple",
     borderRadius: 30,
     width: "70%",
     height: 45,
@@ -125,27 +125,29 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     marginLeft: 20,
+    color: 'black',
   },
 
-  forgot_button: {
-    height: 30,
-    marginBottom: 30,
-  },
 
   loginBtn: {
-    width: "80%",
+    width: "60%",
     borderRadius: 25,
     height: 50,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 40,
-    backgroundColor: "#FF1493",
+    backgroundColor: "white",
   },
 
-  logo: {
+   logo: {
       fontWeight: 'bold',
-      fontSize: 50,
-      color: '#FFFF00',
+      fontSize: 40,
+      color: 'white',
       marginBottom: 40,
-  }
-});
+      marginRight: 50,
+  },
+  loginText: {
+    color: 'black',
+  },
+
+});4

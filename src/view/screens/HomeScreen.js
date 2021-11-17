@@ -11,7 +11,7 @@ import {
 import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
-import goods from '../../consts/goods';
+import goods from '../../consts/goods.js';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
@@ -61,7 +61,7 @@ const HomeScreen = ({navigation}) => {
               <Icon
                 name="favorite"
                 size={18}
-                color={good.like ? COLORS.red : COLORS.black}
+                color={good.like ? COLORS.red : COLORS.white}
               />
             </View>
           </View>
@@ -93,9 +93,10 @@ const HomeScreen = ({navigation}) => {
               style={{
                 height: 25,
                 width: 25,
-                backgroundColor: COLORS.pink,
+                backgroundColor: COLORS.purple,
                 borderRadius: 5,
                 justifyContent: 'center',
+                color: COLORS.purple,
                 alignItems: 'center',
               }}>
               <Text
@@ -114,7 +115,7 @@ const HomeScreen = ({navigation}) => {
       <View style={style.header}>
         <View>
           <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
-          <Text style={{fontSize: 38, color: COLORS.pink, fontWeight: 'bold'}}>
+          <Text style={{fontSize: 38, color: COLORS.purple, fontWeight: 'bold'}}>
             Gifty Closet
           </Text>
         </View>
@@ -156,10 +157,10 @@ const style = StyleSheet.create({
   },
   categoryText: {fontSize: 16, color: 'grey', fontWeight: 'bold'},
   categoryTextSelected: {
-    color: COLORS.pink,
+    color: COLORS.purple,
     paddingBottom: 5,
     borderBottomWidth: 2,
-    borderColor: COLORS.pink,
+    borderColor: COLORS.purple,
   },
   card: {
     height: 225,
@@ -187,14 +188,14 @@ const style = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     flex: 1,
-    color: COLORS.dark,
+    color: COLORS.purple,
   },
   sortBtn: {
     marginLeft: 10,
     height: 50,
     width: 50,
     borderRadius: 10,
-    backgroundColor: COLORS.pink,
+    backgroundColor: COLORS.purple,
     justifyContent: 'center',
     alignItems: 'center',
   },
