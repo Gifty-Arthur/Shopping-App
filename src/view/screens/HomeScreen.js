@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import COLORS from '../../consts/colors';
+import COLORS from '../../consts/colors.js';
 import goods from '../../consts/goods.js';
 const width = Dimensions.get('window').width / 2 - 30;
 

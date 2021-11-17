@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 import HomeScreen from './src/view/screens/HomeScreen';
 import DetailsSceeen from './src/view/screens/DetailsScreen';
 import {StatusBar} from 'react-native';
-import COLORS from './src/consts/colors';
+import COLORS from './src/consts/colors.js';
 import SignInScreen from './src/view/screens/SignInScreen';
 import Login from './src/view/screens/Login';
 import SignUpScreen from './src/view/screens/SignUpScreen';

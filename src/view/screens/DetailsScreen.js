@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, SafeAreaView, Image, Text, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import COLORS from '../../consts/colors';
+import COLORS from '../../consts/colors.js';
 
 const DetailsScreen = ({navigation, route}) => {
   const plant = route.params;
